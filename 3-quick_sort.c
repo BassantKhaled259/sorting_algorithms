@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
-*partition - partition array
+*partition - array partition
 *@array : sort the array
 *@first_node : beginning the array
 *@last_node : end of the array
@@ -17,7 +17,7 @@ for (j = first_node; j <= last_node - 1; j++)
 if (array[j] < array[last_node])
 {
 i++;
-if (1 < j)
+if (j > 1)
 {
 aux = array[i];
 array[i] = array[j];
@@ -54,8 +54,9 @@ quicksort(array, first_node, pivot - 1, size);
 quicksort(array, pivot + 1, last_node, size);
 }
 }
+
 /**
-*quick_sort - sort elements of array using quick sort 
+*quick_sort - sort elements of array using quick sort
 *algorithm in ascending order
 *@array : to be sorted
 *@size : full size of array
